@@ -32,6 +32,5 @@ render(
 
 // GameLoop ticker
 setInterval(() => {
-    console.log(store.getState())
     store.dispatch(tick())
-}, 1000)
+}, 500)

@@ -10,4 +10,6 @@ export function createItem() {
 export function updateItemProgress() {
     return { type: "INC_ITEM_PROGRESS" }
 }
-
+export function itemLevelUp() {
+    return { type: "LEVEL_UP_ITEM" }
+}

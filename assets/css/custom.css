@@ -25,7 +25,11 @@ body {
 }
 .crafting-bar-progress {
     position: absolute;
-    width: 1%;
+    width: 0%;
     height: 100%;
     background-color: #FF5A09;
+
+    -webkit-transition: width 0.5s, height 0.5s;
+    transition: width 0.5s, height 0.5s;
+    transition-timing-function: ease-in-out;
 }
