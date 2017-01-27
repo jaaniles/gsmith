@@ -1,7 +1,9 @@
 import { combineReducers } from "redux"
 
-import crafting from "./craftingReducer"
+import item from "./craftingReducer"
+import game     from "./gameReducer"
 
 export default combineReducers({
-    crafting
+    item,
+    game
 })

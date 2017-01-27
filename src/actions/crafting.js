@@ -6,3 +6,8 @@ export function createItem() {
         }
     }
 }
+
+export function updateItemProgress() {
+    return { type: "INC_ITEM_PROGRESS" }
+}
+

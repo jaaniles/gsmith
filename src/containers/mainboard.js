@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import mainboard from "../components/Mainboard"
 
 function mapStateToProps(state) {
-    const { item } = state
+    const { item } = state.item
 
     return {
         item

@@ -1,6 +1,4 @@
-const initialState = {
-    item: null
-}
+const initialState = {}
 
 export default function(state = initialState, action){
     switch (action.type){
@@ -8,10 +6,10 @@ export default function(state = initialState, action){
         {
             const item = {
                 name: action.payload.item,
-                score: 0
+                progress: 0
             }
 
-            return {...state, item: item}
+            return {...state, item}
         }
         default:
             return state

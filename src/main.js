@@ -5,6 +5,7 @@ import thunkMiddleware from "redux-thunk";
 import { Provider } from "react-redux"
 
 import Mainboard from "./containers/mainboard"
+import { tick }  from "./actions/tick"
 
 import store from "./store"
 const App = createClass({
@@ -17,8 +18,20 @@ const App = createClass({
     }
 })
 
+/*
+store.subscribe(() => {
+    console.log("Store changed!", store.getState())
+})
+*/
+
 render(
     <Provider store={store}>
         <App/>
     </Provider>
 , document.getElementById("app-root"))
+
+// GameLoop ticker
+setInterval(() => {
+    console.log(store.getState())
+    store.dispatch(tick())
+}, 1000)

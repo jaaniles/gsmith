@@ -9,13 +9,13 @@ export default class Mainboard extends React.Component {
         this.props.dispatch(createItem())
     }
     render() {
-        if (!this.props.item){
-            return <div></div>
+        const item = this.props.item
+        if (!item){
+            return <div><h4>Loading..</h4></div>
         }
-        const item = this.props.item.name
         return (
             <div className="mainboard">
-                <h4>{ item }</h4>
+                <h4>{ item.name }</h4>
                 <CraftingBar/>
             </div>
         )
