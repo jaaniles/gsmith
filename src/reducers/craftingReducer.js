@@ -1,4 +1,9 @@
-const initialState = {}
+import { randomNumber } from "../utils/utils"
+import { SKILLS_LIST } from "../constants/skills.js"
+
+const initialState = {
+    skills: SKILLS_LIST
+}
 
 export default function(state = initialState, action){
     switch (action.type){
@@ -34,7 +39,7 @@ export default function(state = initialState, action){
             let item = state.item
             let min = item.progress
 
-            const bonus = { pos: Math.floor(Math.random() * (99 - item.progress + 1) + item.progress) }
+            const bonus = { pos: randomNumber(item.progress, 100)}
 
             item.bonuses = item.bonuses.concat(bonus)
             return {...state, item}

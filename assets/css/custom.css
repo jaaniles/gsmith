@@ -9,6 +9,13 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #393939;
+
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .mainboard {
     background-color: #6E6E6E;
@@ -35,13 +42,65 @@ body {
     transition: width 0.2s, height 0.2s;
     transition-timing-function: ease-in-out;
 }
+
+.crafting-board {
+    background-color: #6E6E6E;
+
+    padding: 15px;
+    width: 50%;
+    margin: 0 auto;
+
+    margin-top: 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    min-height: 200px;
+}
+.crafting-button {
+    margin-right: 2px;
+
+    flex: 1;
+
+    min-width: 5%;
+    min-height: 5%;
+    background-color: #ff9900;
+    border: none;
+    padding: 25px;
+
+    font-size: 22px;
+
+    float: left;
+}
+.crafting-button:hover {
+    background-color: #FF5A09;
+    cursor: pointer;
+
+    font-size: 200%;
+
+    transition: 0.52s;
+}
+.crafting-button:focus{
+    outline: 0;
+}
+.crafting-button:active {
+    font-size: 210%;
+    color: #FF9900;
+    transition: 0.1s;
+}
+.crafting-button span{
+    margin-left: 10px;
+}
 .bonusIcon {
     position: absolute;
     left: 25%;
-    margin-right: 15px;
-    margin-top: 5px;
+    margin-top: 10px;
 
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    font-size: 30px;
+    color: #393939;
+
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
 }
 
 @-webkit-keyframes fadein {

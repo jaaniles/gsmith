@@ -1,5 +1,9 @@
 const initialState = {
-    gameTime: 0
+    gameTime: 0,
+    player: {
+        city: "Basic City",
+        
+    }
 }
 
 export default function(state = initialState, action){

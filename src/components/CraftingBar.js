@@ -23,14 +23,13 @@ export default class CraftingBar extends React.Component {
 
 class BonusIcon extends React.Component {
     render(){
-
         return(
             <div style={{
-                left: `${this.props.bonus}%`
+                left: `${(this.props.bonus - 5)}%`
             }} 
             className="bonusIcon"
             key={Math.floor(Date.now() / 1000)}>
-            []
+            <i className="icon-fire"/>
             </div>
         )
     }

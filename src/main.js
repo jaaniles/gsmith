@@ -5,14 +5,16 @@ import thunkMiddleware from "redux-thunk";
 import { Provider } from "react-redux"
 
 import Mainboard from "./containers/mainboard"
-import { tick }  from "./actions/tick"
+import Craftingboard from "./containers/craftingboard"
 
+import { tick }  from "./actions/tick"
 import store from "./store"
 const App = createClass({
     render: () => {
         return( 
             <div>
                 <Mainboard />
+                <Craftingboard />
             </div>
         )
     }
