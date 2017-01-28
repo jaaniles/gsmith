@@ -1,3 +1,6 @@
+/* ICONS: http://simplelineicons.com/ */
+
+
 export const SKILLS_LIST = [
     {
         name: "Military",
