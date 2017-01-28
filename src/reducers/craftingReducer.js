@@ -44,6 +44,14 @@ export default function(state = initialState, action){
             item.bonuses = item.bonuses.concat(bonus)
             return {...state, item}
         }
+        case "USE_SKILL": 
+        {
+            const skill = action.payload
+            let item = state.item
+            item[skill] ? item[skill]++ : item[skill] = 1
+            
+            return {...state, item} 
+        }
         default:
             return state
     }

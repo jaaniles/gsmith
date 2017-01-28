@@ -13,6 +13,9 @@ export function updateItemProgress() {
 export function itemLevelUp() {
     return { type: "LEVEL_UP_ITEM" }
 }
-export function itemCreateBonus(){
+export function itemCreateBonus() {
     return { type: "ITEM_CREATE_BONUS" }
+}
+export function useSkill(skill) {
+    return { type: "USE_SKILL", payload: skill }
 }
