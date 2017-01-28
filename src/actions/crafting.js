@@ -2,7 +2,7 @@ export function createItem() {
     return {
         type: "CREATE_ITEM",
         payload: {
-            item: "New item"
+            item: "New Artifact"
         }
     }
 }
@@ -12,4 +12,7 @@ export function updateItemProgress() {
 }
 export function itemLevelUp() {
     return { type: "LEVEL_UP_ITEM" }
+}
+export function itemCreateBonus(){
+    return { type: "ITEM_CREATE_BONUS" }
 }

@@ -6,8 +6,9 @@ export default function(state = initialState, action){
         {
             const item = {
                 name: action.payload.item,
+                bonuses: [],
                 progress: 0,
-                level: 0
+                level: 1
             }
 
             return {...state, item}
@@ -24,9 +25,18 @@ export default function(state = initialState, action){
             let { item } = state
             item.progress = 0
             item.level++
+            item.bonuses = []
 
-            console.log(item.level)
+            return {...state, item}
+        }
+        case "ITEM_CREATE_BONUS": 
+        {
+            let item = state.item
+            let min = item.progress
 
+            const bonus = { pos: Math.floor(Math.random() * (99 - item.progress + 1) + item.progress) }
+
+            item.bonuses = item.bonuses.concat(bonus)
             return {...state, item}
         }
         default:

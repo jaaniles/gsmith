@@ -18,12 +18,6 @@ const App = createClass({
     }
 })
 
-/*
-store.subscribe(() => {
-    console.log("Store changed!", store.getState())
-})
-*/
-
 render(
     <Provider store={store}>
         <App/>
@@ -33,4 +27,4 @@ render(
 // GameLoop ticker
 setInterval(() => {
     store.dispatch(tick())
-}, 500)
+}, 100)

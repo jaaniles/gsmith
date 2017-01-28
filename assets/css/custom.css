@@ -5,7 +5,9 @@
     #FF9900 Sinappi orange
     #6E6E6E Vaalee harmaa
 */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 body {
+    font-family: 'Montserrat', sans-serif;
     background-color: #393939;
 }
 .mainboard {
@@ -29,7 +31,25 @@ body {
     height: 100%;
     background-color: #FF5A09;
 
-    -webkit-transition: width 0.5s, height 0.5s;
-    transition: width 0.5s, height 0.5s;
+    -webkit-transition: width 0.2s, height 0.2s;
+    transition: width 0.2s, height 0.2s;
     transition-timing-function: ease-in-out;
+}
+.bonusIcon {
+    position: absolute;
+    left: 25%;
+    margin-right: 15px;
+    margin-top: 5px;
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+.hidden {
+    display: none;
 }
