@@ -1,5 +1,8 @@
 import React from "react"
 
+import { newElKey } from "../utils/utils"
+import { SKILLS_LIST } from "../constants/skills.js"
+
 export default class CraftingBar extends React.Component {
     render() {
         const progress = this.props.progress
@@ -13,7 +16,7 @@ export default class CraftingBar extends React.Component {
                 </div>
                 {this.props.bonuses.map(bonus => {
                     if (progress > bonus.pos){
-                        return <BonusIcon bonus={bonus.pos}/>
+                        return <BonusIcon {...bonus}/>
                     }
                 })}
             </div>
@@ -23,14 +26,17 @@ export default class CraftingBar extends React.Component {
 
 class BonusIcon extends React.Component {
     render(){
+        const skill = getSkill(this.props.skill)
+        const classIcon = `icon-${skill.icon}`
         return(
-            <div style={{
-                left: `${(this.props.bonus - 5)}%`
-            }} 
-            className="bonusIcon"
-            key={Math.floor(Date.now() / 1000)}>
-            <i className="icon-fire"/>
+            <div style={{left: `${(this.props.pos - 5)}%`}} 
+            className="bonusIcon">
+                <i className={classIcon} key={this.props.pos - 5}/>
             </div>
         )
     }
 }
+
+function getSkill(skillName) {
+    return SKILLS_LIST.find(skill => skill.name === skillName)
+} 

@@ -12,6 +12,7 @@ export default function(state = initialState, action){
             const item = {
                 name: action.payload.item,
                 bonuses: [],
+                attributes: {},
                 progress: 0,
                 level: 1
             }
@@ -37,9 +38,11 @@ export default function(state = initialState, action){
         case "ITEM_CREATE_BONUS": 
         {
             let item = state.item
-            let min = item.progress
-
-            const bonus = { pos: randomNumber(item.progress, 100)}
+            const bonusSkill = action.payload.skill
+            const bonus = { 
+                pos: randomNumber(item.progress, 100), // Position in which this bonus shows at
+                skill: bonusSkill
+            }
 
             item.bonuses = item.bonuses.concat(bonus)
             return {...state, item}
@@ -48,8 +51,7 @@ export default function(state = initialState, action){
         {
             const skill = action.payload
             let item = state.item
-            item[skill] ? item[skill]++ : item[skill] = 1
-            
+            item.attributes[skill] ? item.attributes[skill]++ : item.attributes[skill] = 1
             return {...state, item} 
         }
         default:

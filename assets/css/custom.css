@@ -59,7 +59,7 @@ body {
     min-height: 200px;
 }
 .crafting-button {
-    margin-right: 2px;
+    margin-right: 5px;
 
     flex: 1;
 
@@ -72,6 +72,10 @@ body {
     font-size: 22px;
 
     float: left;
+}
+.crafting-button h5 {
+    font-size: 13px;
+    margin-top: 15px;
 }
 .crafting-button:hover {
     background-color: #FF5A09;
