@@ -6,14 +6,18 @@
     "build": "kotatsu build client --es2015 --jsx --public ./assets/ --index index.html ./src/main.js -o ./src/build"
   },
   "babel": {
-    "plugins": ["transform-object-rest-spread", "transform-decorators-legacy"]
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-decorators-legacy"
+    ]
   },
   "dependencies": {
-    "redux": "^3.5.2",
-    "redux-thunk": "^2.1.0",
     "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
-    "react-dom": "^15.3.2"
+    "react-tooltip": "^3.2.3",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.22.0",

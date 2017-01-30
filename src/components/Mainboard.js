@@ -16,7 +16,6 @@ export default class Mainboard extends React.Component {
         return (
             <div className="mainboard">
                 <h4>{ item.name } +{ item.level }</h4>
-                <CraftingBar {...item}/>
             </div>
         )
     }

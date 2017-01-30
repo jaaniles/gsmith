@@ -5,7 +5,7 @@ import { randomNumber } from "../utils/utils"
 export function tick() {
     return (dispatch, getState) => {
         const { game, item } = getState()
-
+        if (game.pause) { return }
         if (item.item.progress >= 100){ //  Progress 100%, level up and progress -> 0%
             dispatch(itemLevelUp())
         } 

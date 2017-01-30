@@ -21,7 +21,7 @@ body {
     background-color: #6E6E6E;
     padding: 15px;
 
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
 
     margin-top: 25%; 
@@ -47,49 +47,59 @@ body {
     background-color: #6E6E6E;
 
     padding: 15px;
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
 
     margin-top: 5px;
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
 
-    min-height: 200px;
+    min-height: 270px;
 }
 .crafting-button {
+    margin-top: 5px;
     margin-right: 5px;
 
     flex: 1;
 
     min-width: 5%;
     min-height: 5%;
-    background-color: #ff9900;
+
+    background: none;
+
     border: none;
     padding: 25px;
 
-    font-size: 22px;
+    font-size: 18px;
+}
+.skillDiv {
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+}
 
-    float: left;
+.skillIcon {
+    margin: 0 auto;
+
+    width: 80px;
+    height: 80px;
+
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
-.crafting-button h5 {
-    font-size: 13px;
-    margin-top: 15px;
-}
-.crafting-button:hover {
-    background-color: #FF5A09;
+.skillIcon:hover {
     cursor: pointer;
-
-    font-size: 200%;
-
-    transition: 0.52s;
+    transition: .52s ease-in-out;
+    transform: scale(1.1);
+    
+    color: #FF9900;
+}
+ 
+.crafting-button small{
+    font-size: 12px;
 }
 .crafting-button:focus{
     outline: 0;
 }
 .crafting-button:active {
-    font-size: 210%;
     color: #FF9900;
     transition: 0.1s;
 }

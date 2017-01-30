@@ -1,9 +1,7 @@
 import { randomNumber } from "../utils/utils"
 import { SKILLS_LIST } from "../constants/skills.js"
 
-const initialState = {
-    skills: SKILLS_LIST
-}
+const initialState = {}
 
 export default function(state = initialState, action){
     switch (action.type){
@@ -16,7 +14,6 @@ export default function(state = initialState, action){
                 progress: 0,
                 level: 1
             }
-
             return {...state, item}
         }
         case "INC_ITEM_PROGRESS":
@@ -49,10 +46,12 @@ export default function(state = initialState, action){
         }
         case "USE_SKILL": 
         {
+            /*
             const skill = action.payload
             let item = state.item
             item.attributes[skill] ? item.attributes[skill]++ : item.attributes[skill] = 1
-            return {...state, item} 
+            return {...state, item}
+            */
         }
         default:
             return state

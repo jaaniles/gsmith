@@ -1,8 +1,8 @@
 const initialState = {
     gameTime: 0,
+    pause: false,
     player: {
         city: "Basic City",
-        
     }
 }
 
