@@ -49,13 +49,3 @@ class SkillIcon extends React.Component {
         )
     }
 }
-/*
-const classList = `icon-${skill.icon} icon`
-<button 
-className="crafting-button" 
-onClick={() => this.useSkill(skill.name)}
-key={skill.name}>
-    <i className={classList}/><span>{skill.name}</span>
-    <h5>+{item.attributes[skill.name]}</h5>
-</button>
-*/

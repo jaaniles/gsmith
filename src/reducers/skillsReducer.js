@@ -11,27 +11,19 @@ export default function(state = initialState, action){
         case "CREATE_ITEM":
         {
             let skills = []
-            for (let i = 0; i < PLAYER_SKILL_CAP; i++){
-                skills.push(pickRandomSkill())
-            }
-            skills.forEach(skill => {
-                console.log(skill)
-            })
-            /*
             while (skills.length < PLAYER_SKILL_CAP){
-                console.log(i)
-                let i = 0;
                 skills.push(pickRandomSkill())
-                i++
             }
-            */
             return {...state, skills}
         }
-        case "REMOVE_SKILL":
+        case "SWAP_SKILL":
         {
+            console.log("SwapskilL!")
             const usedSkillKey = action.payload.key
-            let skills = state.skills.filter(skill => skill.key != usedSkillKey)
-            skills.push(pickRandomSkill())
+            const usedSkill = state.skills.find(skill => skill.key == usedSkillKey)
+            let skills = state.skills
+            skills[skills.indexOf(usedSkill)] = pickRandomSkill()
+            console.log("Done swapping, ",skills)
             return {...state, skills}
         }
         default:

@@ -9,7 +9,10 @@ export function createItem() {
 export function useSkill(skill) {
     return (dispatch, getState) => {
         const { game, item, skills } = getState()
-        dispatch(removeSkill(skill))
+        
+        // swap used skill for a new one
+        dispatch(swapSkill(skill))
+
         switch (skill.name){
             case "Timestop": 
             {   
@@ -26,7 +29,6 @@ export function useSkill(skill) {
             }
         }
     }
-    //return { type: "USE_SKILL", payload: skill }
 }
 
 export function updateItemProgress() {
@@ -38,6 +40,6 @@ export function itemLevelUp() {
 export function itemCreateBonus(skill) {
     return { type: "ITEM_CREATE_BONUS", payload: skill }
 }
-export function removeSkill(skill){
-    return {type: "REMOVE_SKILL", payload: skill}
+export function swapSkill(skill){
+    return {type: "SWAP_SKILL", payload: skill}
 }
